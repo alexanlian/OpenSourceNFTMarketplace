@@ -1,0 +1,11 @@
+#Hardhat files
+cache
+artifacts/*
+!artifacts/contracts
+!artifacts/contracts/*
+!artifacts/contracts/NFT.sol
+artifacts/contracts/NFT.sol/*
+!artifacts/contracts/NFT.sol/NFT.json
+!artifacts/contracts/NFTMarket.sol
+artifacts/contracts/NFTMarket.sol/*
+!artifacts/contracts/NFTMarket.sol/NFTMarket.json
