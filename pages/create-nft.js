@@ -99,7 +99,7 @@ export default function CreateItem() {
                       )
                   }
                   <button onClick={listNFTForSale} className="px-6 py-2 flex flex-basis-1/2 text-sm transition-colors duration-300 border-2
-            rounded-full shadow-xl text-black-500 text-center border-custom-400 shadow-custom-300/30
+            rounded-full shadow-xl text-white bg-black text-center grid border-custom-400 shadow-custom-300/30
             hover:bg-custom-600 hover:text-white">Mint NFT!</button>
 
               </div>

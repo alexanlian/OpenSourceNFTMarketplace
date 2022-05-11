@@ -25,35 +25,35 @@ function MyApp({ Component, pageProps }) {
     function aboutUS()
     {
         return(
-            swal("Hello, we are a team of 3 computer engineering student that strive to learn more " +
-                "every time we can, you are currently viewing our first project which consists of an NFT Marketplace where"
-         )
+            swal("Hello! We are a team of 3 computer engineering student that strive to learn more " +
+                "every time we can. \n You are currently viewing our first project which consists of an NFT Marketplace where"
+         + "you can mint, buy and view related NFTs! Have a good time!")
         )
     }
     return (
-        <div className = "bg-gradient-to-b from-black to-white">
+        <div className = "bg-gradient-to-br from-black to-custom-100">
             <nav className = "border-b p-6" >
-                <p className = "text-5xl text-center text-white font-bold">
-                    Open - Source NFT Marketplace
+                <p className = "text-6xl text-center text-white font-bold font-sans animate-pulse font-serif">
+                    Xera NFT
                 </p>
                     <div className = "flex grid grid-cols-4 gap-5 content-center mt-4" >
                         <Link href = "/" >
-                            <a className = "mr-4 text-blue-500 text-center border" >
+                            <a className = "mr-4 text-white text-center border" >
                                 Home
                             </a>
                         </Link>
                         <Link href = "/create-nft" >
-                            <a className = "mr-6 text-blue-500 text-center border" >
+                            <a className = "mr-6 text-white text-center border" >
                                 Mint an NFT
                             </a>
                         </Link>
                         <Link href = "/my-nfts" >
-                            <a className = "mr-6 text-blue-500 text-center border" >
+                            <a className = "mr-6 text-white text-center border" >
                                 Check my NFTs
                             </a>
                         </Link>
                         <Link href = "/dashboard" >
-                            <a className = "mr-6 text-blue-500 text-center border" >
+                            <a className = "mr-6 text-white text-center border" >
                                 My Dashboard
                             </a>
                         </Link>
@@ -64,11 +64,15 @@ function MyApp({ Component, pageProps }) {
                     {...pageProps}>
                 </Component>
             </div>
-            <div className="flex grid grid-cols-2 justify-center border-red-700 ">
-                <button onClick={aboutUS} >
+            <div className="flex  grid-cols-2 justify-center ">
+                <button onClick={aboutUS} className="mr-44 ml-44" >
                     About Us
                 </button>
-                <a className="text-center" href="mailto:alexanlian@gmail.com">Contact Us</a>
+
+            <p className="mr-44 ml-44 rounded ">Having difficulties?
+                <a className="text-center ml-1" href="mailto:alexanlian@gmail.com">
+                     Contact Us</a>
+            </p>
 
             </div>
         </div>

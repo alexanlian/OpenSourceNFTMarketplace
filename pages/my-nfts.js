@@ -1,4 +1,4 @@
-/* pages/my-nfts.js */
+//Viewing bought NFTs
 import { ethers } from 'ethers'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
@@ -51,7 +51,7 @@ export default function MyAssets() {
     console.log('nft:', nft)
     router.push(`/resell-nft?id=${nft.tokenId}&tokenURI=${nft.tokenURI}`)
   }
-  if (loadingState === 'loaded' && !nfts.length) return (<h1 className="py-10 px-20 text-3xl">No NFTs owned</h1>)
+  if (loadingState === 'loaded' && !nfts.length) return (<h1 className="py-10 px-20 text-center text-white text-3xl">No NFTs owned... but you can buy some from the home page :)</h1>)
   return (
     <div className="flex justify-center">
       <div className="p-4">
@@ -61,8 +61,9 @@ export default function MyAssets() {
               <div key={i} className="border shadow rounded-xl overflow-hidden">
                 <img src={nft.image} className="rounded" />
                 <div className="p-4 bg-black">
-                  <p className="text-2xl font-bold text-white">Price - {nft.price} Eth</p>
-                  <button className="mt-4 w-full bg-pink-500 text-white font-bold py-2 px-12 rounded" onClick={() => listNFT(nft)}>List</button>
+                  <p className="text-2xl font-bold text-white text-center"> - {nft.name}</p>
+                  <p className="text-2xl font-bold text-white text-center">Price - {nft.price} Eth</p>
+                  <button className="mt-4 w-full bg-white text-black font-bold py-2 px-12 rounded" onClick={() => listNFT(nft)}>List</button>
                 </div>
               </div>
             ))

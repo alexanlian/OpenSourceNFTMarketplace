@@ -53,7 +53,7 @@ export default function Home() {
     const signer = provider.getSigner()
     const contract = new ethers.Contract(marketplaceAddress, NFTMarketplace.abi, signer)
 
-    /* user will be prompted to pay the asking proces to complete the transaction */
+    /* user will be prompted to pay the asking process to complete the transaction */
     const price = ethers.utils.parseUnits(nft.price.toString(), 'ether')   
     const transaction = await contract.createMarketSale(nft.tokenId, {
       value: price
@@ -68,8 +68,8 @@ export default function Home() {
   }
   return (
      <div>
-<div className="text-white animate-bounce">
-  Have a look at our available NFTs below!
+<div className="mr-96 grid grid-cols-2 text-white text-center pt-4 text-2xl"> Have a look at our available NFTs below!
+  <img src = "https://img.icons8.com/ios-glyphs/344/thick-arrow-pointing-down.png" className = "animate-bounce w-10 h-10"></img>
 </div>
     <div className="flex justify-center">
       <div className="px-4" style={{ maxWidth: '1600px' }}>
@@ -79,14 +79,14 @@ export default function Home() {
               <div key={i} className="border shadow rounded-xl overflow-hidden">
                 <img src={nft.image} />
                 <div className="p-4">
-                  <p style={{ height: '64px' }} className="text-2xl font-semibold">{nft.name}</p>
+                  <p style={{ height: '64px' }} className="text-2xl font-semibold text-center">{nft.name}</p>
                   <div style={{ height: '70px', overflow: 'hidden' }}>
-                    <p className="text-gray-400">{nft.description}</p>
+                    <p className="text-black">{nft.description}</p>
                   </div>
                 </div>
                 <div className="p-4 bg-black">
-                  <p className="text-2xl font-bold text-white">{nft.price} ETH</p>
-                  <button className="mt-4 w-full bg-white text-red-900 font-bold py-2 px-12 rounded" onClick={() => buyNft(nft)}>Buy</button>
+                  <p className="text-2xl font-bold text-white text-center">{nft.price} ETH</p>
+                  <button className="mt-4 w-full bg-white text-black font-bold py-2 px-12 rounded" onClick={() => buyNft(nft)}>Buy Now</button>
                 </div>
               </div>
             ))
@@ -94,6 +94,6 @@ export default function Home() {
         </div>
       </div>
     </div>
-     </div>
+  </div>
   )
 }
